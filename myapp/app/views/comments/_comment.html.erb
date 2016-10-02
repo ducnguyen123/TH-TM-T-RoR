@@ -1,12 +1,9 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"  ><span aria-hidden="true"></span> <%= link_to 'x', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %> </button>
+  <strong><%= comment.commenter %>: </strong> <%= comment.body %>
+</div>
 
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],

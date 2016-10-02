@@ -4,11 +4,16 @@
     <title>Myapp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
+    
+  	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="data:text/css;charset=utf-8," rel="stylesheet" data-href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" id="bs-theme-stylesheet">
   </head>
 
   <body>
+  	<ul class="nav nav-tabs">
+	  <li role="presentation" ><%= link_to 'My Blog', controller: 'articles' %></li>
+	  <li role="presentation"><%= link_to 'New article', new_article_path %></li>
+	</ul>
     <%= yield %>
   </body>
 </html>

@@ -1,15 +1,15 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
- 
+ <br> <br> 
+
+<div class="panel panel-default">
+  <div class="panel-heading"><%= @article.title %></div>
+  <div class="panel-body">
+    <%= @article.text %>
+  </div>
+</div>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
+
  
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
