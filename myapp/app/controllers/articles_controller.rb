@@ -33,8 +33,7 @@ class ArticlesController < ApplicationController
 		else
 			render 'edit'
 		end
-<<<<<<< HEAD
-=======
+
 	end
 
 	def destroy
@@ -42,7 +41,6 @@ class ArticlesController < ApplicationController
 		@article.destroy
 
 		redirect_to articles_path
->>>>>>> Four commit: update Comment and delete
 	end
 
 	private
